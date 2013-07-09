@@ -4,7 +4,7 @@ var fs =require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  fs.readfile('index.html',function(err,data){
+  fs.readFile('index.html',function(err,data){
       if (err) throw error;
       response.send(data.toString('utf-8'));
   });
